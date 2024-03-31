@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Depression Test</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+      .header-container {
+      background-color: #630989;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+          <h1>Depression Test</h1>
+        </div>
+    </header>
+
+  <section class="questions-section">
+    <div class="question">
+      <p>Question 1: Do you feel sad or hopeless?</p>
+      <select id="q1">
+        <option value="0">Not at all</option>
+        <option value="1">Just a little</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Often</option>
+        <option value="4">Usually</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Question 2: Do you have trouble concentrating?</p>
+      <select id="q2">
+        <option value="0">Not at all</option>
+        <option value="1">Just a little</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Often</option>
+        <option value="4">Usually</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Question 3: How often have you felt tired or had little energy over the past two weeks?</p>
+      <select id="q3">
+        <option value="0">Not at all</option>
+        <option value="1">Just a little</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Often</option>
+        <option value="4">Usually</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Question 4: Have you experienced a significant change in your appetite or weight recently?</p>
+      <select id="q4">
+        <option value="0">Not at all</option>
+        <option value="1">Just a little</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Often</option>
+        <option value="4">Usually</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Question 5: Have you had trouble falling asleep, staying asleep, or sleeping too much over the past two weeks?</p>
+      <select id="q5">
+        <option value="0">Not at all</option>
+        <option value="1">Just a little</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Often</option>
+        <option value="4">Usually</option>
+      </select>
+    </div>
+
+    <!-- Add more questions as needed -->
+
+    <button onclick="calculateScore()">Submit</button>
+    <p id="result" style="display: none;"></p>
+  </section>
+
+  <script>
+    function calculateScore() {
+        const q1 = parseInt(document.querySelector('input[name="q1"]:checked').value);
+      const q2 = parseInt(document.querySelector('input[name="q2"]:checked').value);
+
+      // Add more question values and calculations for each question
+      const totalScore = q1 + q2; // Add more values if needed
+
+      let result = 'Unknown';
+      if (totalScore <= 3) {
+        result = 'Very Low';
+      } else if (totalScore <= 6) {
+        result = 'Low';
+      } else if (totalScore <= 9) {
+        result = 'Medium';
+      } else {
+        result = 'Severe';
+      }
+
+      document.getElementById('result').innerText = `Result: ${result}`;
+      document.getElementById('result').style.display = 'block';
+
+    }
+  </script>
+
+</body>
+
+</html>

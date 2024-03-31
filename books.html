@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Motivating Books</title>
+   
+    <title>Self Help Books- My Health and Wellness</title>
+    <style>
+        /* style.css */
+
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.books-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #630989;
+}
+
+/* Book Link Styles */
+
+.books-section ul li {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.book-cover {
+    display: block;
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.book-cover:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .books-section {
+        max-width: 90%;
+    }
+
+}
+
+
+/* Add this CSS to your existing styles.css file or include it in the <style> tag in your HTML file */
+
+/* PDF Viewer Modal Styles */
+#pdfViewerModal {
+    display: none; /* Hide the modal by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    width: 80%; /* Adjust the width as needed */
+    height: 80%; /* Adjust the height as needed */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#iframeContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#iframeContainer iframe {
+    max-width: 100%;
+    max-height: 100%;
+    border: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-container h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #bbb;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*body {background-color: #7469B6;
+opacity: 0.6;
+background: radial-gradient(circle, transparent 20%, #7469B6 20%, #7469B6 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #7469B6 20%, #7469B6 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#FFE6E6 1.2000000000000002px, transparent 1.2000000000000002px) 0 -0.6000000000000001px, linear-gradient(90deg, #FFE6E6 1.2000000000000002px, #7469B6 1.2000000000000002px) -0.6000000000000001px 0;
+background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
+}
+*/
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>My Health & Wellness</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="books-section">
+        <h2>Inspirational Books</h2>
+        <div class="book-container">
+            <ul>
+                <li>
+                    <a href="#" onclick="openPdfViewer('14UJF3b-ggUWNuECapc2ucXvz0EeDnM4g/preview')">
+                        <img class="book-cover" src="anxiety.jpg" alt="Book Cover 2">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="openPdfViewer('14UJF3b-ggUWNuECapc2ucXvz0EeDnM4g/preview')">
+                        <img class="book-cover" src="stop.jpg" alt="Book Cover 2">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="openPdfViewer('14UJF3b-ggUWNuECapc2ucXvz0EeDnM4g/preview')">
+                        <img class="book-cover" src="declutter.jpg" alt="Book Cover 2">
+                    </a>
+                </li>
+                <!-- Add more book covers as needed -->
+            </ul>
+        </div>
+    </section>
+    
+    <div id="pdfViewerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePdfViewer()">&times;</span>
+            <iframe id="pdfViewer" width="800" height="600" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2023 My Health & Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openPdfViewer(pdfUrl) {
+            var modal = document.getElementById("pdfViewerModal");
+            var pdfViewer = document.getElementById("pdfViewer");
+            pdfViewer.src = "https://drive.google.com/file/d/" + pdfUrl;
+            /https://drive.google.com/file/d/YOUR_PDF_FILE_ID/preview/
+            modal.style.display == "block";
+        }
+
+        function closePdfViewer() {
+            var modal = document.getElementById("pdfViewerModal");
+            modal.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
